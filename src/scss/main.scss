@@ -43,8 +43,56 @@ body {
   &__water {
     position: absolute;
     bottom: 18px;
+    animation: water .5s linear alternate infinite;
+    &--fill {
+      transform-origin: bottom center;
+      animation: fill .6s linear 1, water .5s .6s linear alternate infinite;
+    }
+    &--empty {
+      animation: empty .6s linear 1 forwards;
+      
+    }
   }
 }
+
+@keyframes water{
+  0% {
+    transform: scaley(1);
+    transform-origin: bottom center;
+  }
+  100% {
+    transform: scaley(1.05);
+    transform-origin: bottom center;
+  }
+}
+
+@keyframes fill{
+  0% {
+    transform: scale(0.75, 0);
+    transform-origin: bottom center;
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1, 1);
+    transform-origin: bottom center;
+    opacity: 1;
+  }
+}
+
+@keyframes empty{
+  0% {
+    transform: scale(1, 1);
+    transform-origin: bottom center;
+    opacity: 1;
+    
+  }
+  100% {
+    transform: scale(0.75, 0);
+    transform-origin: bottom center;
+    opacity: 0;
+  }
+}
+
 
 .buttons {
   display: flex;
@@ -63,11 +111,13 @@ body {
     border-radius: 4px;
     border: none;
     font-size: 18px;
+    cursor: pointer;
   }
   &__remove {
     background: none;
     border:none;
     color: #fff;
+    cursor: pointer;
   }
 }
 
