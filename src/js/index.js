@@ -12,6 +12,7 @@ const counter = document.querySelector('.container__counter--js');
 const key = new Date().toLocaleString().slice(0, 10);
 const water = document.querySelector('.container__water');
 
+
 if(localStorage.getItem(key, counter.value)) {
     counter.value = localStorage.getItem(key, counter.value);
     counter.innerHTML = counter.value;
@@ -22,10 +23,15 @@ else {
     counter.innerHTML = counter.value;
 }
 
+if(counter.value == 0) {
+    water.classList.add('container__water--begin');
+}
+
 add.addEventListener('click', () => {
     if(counter.value == 0) {
         water.classList.add('container__water--fill');
         water.classList.remove('container__water--empty');
+        water.classList.remove('container__water--begin');
     }
     counter.value++;
     counter.innerHTML = counter.value;

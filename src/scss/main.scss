@@ -50,7 +50,9 @@ body {
     }
     &--empty {
       animation: empty .6s linear 1 forwards;
-      
+    }
+    &--begin {
+      display: none;
     }
   }
 }
