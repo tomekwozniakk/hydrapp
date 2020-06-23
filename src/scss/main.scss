@@ -46,7 +46,7 @@ body {
     animation: water .5s linear alternate infinite;
     &--fill {
       transform-origin: bottom center;
-      animation: fill .6s linear 1, water .5s .6s linear alternate infinite;
+      animation: fill .6s linear 1, water .6s .6s linear alternate infinite;
     }
     &--empty {
       animation: empty .6s linear 1 forwards;
@@ -63,7 +63,7 @@ body {
     transform-origin: bottom center;
   }
   100% {
-    transform: scaley(1.05);
+    transform: scaley(1.03);
     transform-origin: bottom center;
   }
 }
