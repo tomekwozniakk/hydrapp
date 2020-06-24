@@ -1,0 +1,42 @@
+.bubble {
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  bottom: 2%;
+  animation: bubbles 3s infinite ease-in-out ;
+  &--one {
+    left: 32%;
+    animation-delay: .3s;
+  }
+  &--two {
+    left: 38%;
+    animation-delay: .8s;
+  }
+  &--three {
+    left: 45%;
+    animation-delay: .5s;
+  }
+  &--four {
+    left: 50%;
+  }
+  &--five {
+    left: 62%;
+    animation-delay: .2s;
+  }
+  &--six {
+    left: 68%;
+    animation-delay: 1.2s;
+  }
+}
+
+@keyframes bubbles {
+    0% {
+        bottom: 2%;
+    }
+    100% {
+        bottom: 80%;
+    }
+}

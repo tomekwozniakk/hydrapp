@@ -1,0 +1,69 @@
+.container {
+  position: relative;
+  height: 280px;
+  width: 280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__counter {
+    z-index: 1;
+    font-size: 112px;
+  }
+  &__glass {
+    position: absolute;
+    z-index: -1;
+  }
+  &__water {
+    position: absolute;
+    bottom: 18px;
+    animation: water 0.5s linear alternate infinite;
+    &--fill {
+      transform-origin: bottom center;
+      animation: fill 0.6s linear 1, water 0.6s 0.6s linear alternate infinite;
+    }
+    &--empty {
+      animation: empty 0.6s linear 1 forwards;
+    }
+    &--begin {
+      display: none;
+    }
+  }
+}
+
+@keyframes fill {
+  0% {
+    transform: scale(0.75, 0);
+    transform-origin: bottom center;
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1, 1);
+    transform-origin: bottom center;
+    opacity: 1;
+  }
+}
+
+@keyframes empty {
+  0% {
+    transform: scale(1, 1);
+    transform-origin: bottom center;
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.75, 0);
+    transform-origin: bottom center;
+    opacity: 0;
+  }
+}
+
+@keyframes water {
+  0% {
+    transform: scaley(1);
+    transform-origin: bottom center;
+  }
+  100% {
+    transform: scaley(1.03);
+    transform-origin: bottom center;
+  }
+}
