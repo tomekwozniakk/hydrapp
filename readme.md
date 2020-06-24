@@ -1,12 +1,17 @@
-![cover](https://cotenfrontend.pl/img/cover.png)
+![cover](https://tomekwozniakk.github.io/hydrapp/fb.png)
 
-# WTF Webpack Starter Kit 
+# Hydrapp 
 
-Simple toolkit for your static websites development.
+Simple application to count your daily water intake. Build using [webpack-starter](https://github.com/maciejkorsan/wtf-webpack-starter).
 
 ## How to use it?
 
-Click on `Use this template` button to generate a new repository based on this starter kit. After that clone it to your computer, go to the project directory in console and type `npm install`.
+- to add a glass of water that you just drank, push the "add glass" button
+- to remove a glass of water, push "remove glass" button
+- information is stored about your total daily intake of water
+- every day at midnight counter resets to 0
+
+# Webpack - starter options:
 
 ## Available scripts
 
