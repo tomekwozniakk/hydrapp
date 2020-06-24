@@ -7,7 +7,8 @@
   align-items: center;
   justify-content: center;
   &__counter {
-    z-index: 1;
+    margin-top: 160px;
+    z-index: 2;
     font-size: 112px;
   }
   &__glass {

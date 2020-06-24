@@ -1,12 +1,12 @@
 .bubble {
   width: 5px;
   height: 5px;
-  background: #ECEFF1;
   border-radius: 50%;
-  z-index: 2;
   position: absolute;
   bottom: 2%;
   animation: bubbles 3s infinite ease-in-out ;
+  background: #ECEFF1;
+  z-index: 1;
   &--one {
     left: 32%;
     animation-delay: .3s;
